@@ -1,7 +1,9 @@
+import './firebase'
 import './globals.css'
 import type { Metadata } from 'next'
 import { Prompt } from 'next/font/google'
 import { Header } from '../components/header'
+import { Footer } from '../components/footer'
 
 const prompt = Prompt({ weight: ['400', '500', '700'], style: ["normal"], subsets:['latin'] })
 
@@ -20,6 +22,7 @@ export default function RootLayout({
       <body className={prompt.className}>
         <Header/>
         {children}
+        <Footer/>
       </body>
     </html>
   )
