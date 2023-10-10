@@ -3,11 +3,15 @@ import React from 'react'
 import { SearchType, Filter, FilterButton, FilterButtonSpan, Period, SearchName, SearchDate, SearchDateSpan, SearchOrder, SearchTime, SearchTimeButton, SearchTimeSpan, SearchAlphabetic, AscendingOrder, SearchAlphabeticSpan, DescendingOrder } from './styled'
 import Image from 'next/image'
 // , Period, SearchType, SearchName, SearchDate,  SearchTime, SearchAlphabetic, Filter, FilterButton, FilterButtonSpan, SearchDateSpan, Recent, Old, AscendingOrder, DescendingOrder
-export const FilterDropDown = () => {
+interface iFilterDropdownProps {
+  onClick: React.MouseEventHandler<HTMLButtonElement>
+}
+
+export const FilterDropDown = ({ onClick }: iFilterDropdownProps) => {
   return (
     <SearchType>
       <Filter>
-        <FilterButton>
+        <FilterButton onClick={onClick}>
           <Image src="icons/filter_alt.svg" alt="" width={16} height={16} />
           <FilterButtonSpan>
             Filtro
