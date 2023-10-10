@@ -4,7 +4,7 @@ import styled from 'styled-components'
 export const SectionControlPanel = styled.section`
   width: 360px;
   height: 160px;
-  padding: 0px 40px;
+  padding: 10px 40px;
   gap: 16px;
   display: flex;
   flex-direction: column;
@@ -17,6 +17,7 @@ export const Span = styled.span`
   line-height: 16px;
   letter-spacing: 0.05em;
   color: #2890CA;
+  align-self: flex-start;
 `
 
 export const ContainerSearchBar = styled.div`
@@ -53,9 +54,8 @@ export const FilterButton = styled.button `
 `
 export const FilterDiv = styled.div `
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  width: 300px;
+  width: 100%;
   height: 300px;
+  z-index: 1;
+  position: relative;
 `
