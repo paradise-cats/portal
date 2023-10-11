@@ -2,135 +2,134 @@
 import styled from 'styled-components'
 // SearchOrder, Periodo, SearchType OrdemDePesquisa, De, Ate, MaisAntigo, MaisRecente, OrdemAlfabeticaCrescente, OrdemAlfabeticaDecrescente
 export const SearchType = styled.section `
-  width: 100%;
-  height: 40vh;
+  align-items: flex-start;
+  background-color: #ffffff;
   border-radius: 8px;
+  color: #A3A3A3;
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
   gap: 10px;
-  background-color: #ffffff;
-  z-index: 1;
-  color: #A3A3A3;
+  height: 40vh;
   padding: 16px;
   position: absolute;
   top: 0;
+  width: 100%;
+  z-index: 1;
 `
 export const Filter = styled.article `
-  width: 100%;
-  height: 24px;
-  display: flex;
   align-items: center;
+  display: flex;
+  height: 24px;
   justify-content: flex-start;
+  width: 100%;
 `
 export const FilterButton = styled.button `
-  padding: 8px 0px;
-  display: flex;
   align-items: center;
   background-color: #ffffff;
-  width: 90%;
-  height: 16px;
+  display: flex;
   gap: 10px;
+  height: 16px;
+  padding: 8px 0px;
+  width: 90%;
 
 `
 export const FilterButtonSpan = styled.span `
+  color: #A3A3A3;
   font-size: 14px;
   font-weight: 400;
-  line-height: 16px;
   letter-spacing: 0.05em;
-  color: #A3A3A3;
+  line-height: 16px;
 `
 export const Period = styled.div `
   display: flex;
   flex-direction: column;
-  width: 243px;
-  height: 56px;
   gap: 16px;
+  height: 56px;
+  width: 243px;
 `
 export const SearchName = styled.span `
+  color: #6C6C6C;
   font-size: 14px;
   font-weight: 400;
-  line-height: 16px;
   letter-spacing: 0.05em;
-  color: #6C6C6C;
+  line-height: 16px;
 
 `
 export const SearchDate = styled.div `
   display: flex;
   flex-direction: row;
-  width: 243px;
-  height: 24px;
   gap: 8px;
-
+  height: 24px;
+  width: 243px;
 `
 export const SearchDateSpan = styled.span `
+  color: #2890CA;
   font-size: 14px;
   font-weight: 400;
-  line-height: 16px;
   letter-spacing: 0.05em;
-  color: #2890CA;
+  line-height: 16px;
 `
 export const SearchOrder = styled.article `
+  align-items: flex-start;
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
+  gap: 16px;
+  height: 160px;
   justify-content: flex-end;
   width: 226px;
-  height: 160px;
-  gap: 16px;
 `
 export const SearchTime = styled.div `
   display: flex;
   flex-direction: row;
-  width: 100%;
-  height: 32px;
   gap: 8px;
+  height: 32px;
+  width: 100%;
 
 `
 export const SearchTimeButton = styled.button `
-  display: flex;
-  flex-direction: row;
   align-items: center;
-  padding: 8px;
+  background-color: #ffffff;
   border-radius: 37px;
   border: 0.8px solid #2890CA;
+  display: flex;
+  flex-direction: row;
   gap: 8px;
-  background-color: #ffffff;
+  padding: 8px;
 `
 export const SearchTimeSpan = styled.span `
+  color: #2890CA;
   font-size: 14px;
   font-weight: 400;
-  line-height: 16px;
   letter-spacing: 0.05em;
-  color: #2890CA;
+  line-height: 16px;
 `
 export const SearchAlphabetic = styled.div `
+  align-items: flex-start;
+  background-color: #ffffff;
   display: flex;
   flex-direction: column;
-  justify-content: flex-end;
-  align-items: flex-start;
-  width: 100%;
-  height: 200px;
-  background-color: #ffffff;
   gap: 8px;
+  height: 200px;
+  justify-content: flex-end;
+  width: 100%;
 `
 export const AscendingOrder = styled.button `
   background: #ffffff;
-  width: 60%;
-  height: 32px;
-  padding: 8px;
   border-radius: 37px;
   border: 0.8px solid #2890CA;
+  height: 32px;
+  padding: 8px;
+  width: 60%;
 `
 export const SearchAlphabeticSpan = styled.span `
   color: #2890CA;
 `
 export const DescendingOrder = styled.button `
   background: #ffffff;
-  width: 60%;
-  height: 32px;
-  padding: 8px;
   border-radius: 37px;
   border: 0.8px solid #2890CA;
+  height: 32px;
+  padding: 8px;
+  width: 60%;
 `
 

@@ -3,10 +3,13 @@ import React from 'react'
 import { FooterContainer, FooterButton } from './styled'
 import Image from 'next/image'
 
-export const Footer = () => {
+interface iFooterProps {
+  openModal: Function
+}
+export const Footer = ({openModal}: iFooterProps) => {
   return (
     <FooterContainer>
-        <FooterButton>
+        <FooterButton onClick={()=>openModal()}>
           <Image src="icons/add.svg" alt="+" width={15} height={15} />
           Adicionar Gastos
       </FooterButton>
