@@ -1,16 +1,11 @@
 'use client'
 import React from 'react'
-import { Form, CloseForm, StyledImage, TextBoxName, TextBox, DescriptionBox, PhotoDiv, FormButtonSpan, ImageButton, ImageButtonSpan, FormButton } from './styled'
+import { Form, TextBoxName, TextBox, DescriptionBox, PhotoDiv, FormButtonSpan, ImageButton, ImageButtonSpan, FormButton } from './styled'
 import Image from 'next/image'
-interface iFooterProps {
-  closeModal: Function
-}
-export const RegisterForm = ({closeModal}: iFooterProps) => {
+
+export const RegisterForm = () => {
   return (
     <Form>
-      <CloseForm>
-        <StyledImage src="icons/close.svg" alt="" width={24} height={24} onClick={()=> closeModal()}/>
-      </CloseForm>
       <TextBoxName>
           Título
         </TextBoxName>

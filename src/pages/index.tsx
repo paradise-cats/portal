@@ -7,6 +7,7 @@ import { Pagination } from '../components/pagination'
 import { Register } from '../components/register'
 import { RegisterForm } from '../components/register/form'
 
+
 export default function Home() {
   const [isModalOpen, setIsModalOpen] = useState(false)
   const closeModal = () => {
@@ -25,8 +26,8 @@ export default function Home() {
         </main>
       </BaseLayout>
       {!!isModalOpen &&
-        <Register>
-         <RegisterForm closeModal={closeModal} />
+        <Register closeModal={closeModal}>
+         <RegisterForm />
         </Register>}
     </>
   )

@@ -1,5 +1,6 @@
 import { Header } from '../header'
 import { Footer } from '../footer'
+import { Login } from '@/components/register/login'
 
 export const BaseLayout = ({
   children,

@@ -1,7 +1,6 @@
 'use client'
 import styled from 'styled-components'
-import Image from 'next/image'
-//Form, TextBoxName, TextBoxTittle, TextBoxValue, TextBoxAmount, TextBoxDate, TextBoxDescription
+
 
 export const Form = styled.form`
   display: flex;
@@ -10,18 +9,6 @@ export const Form = styled.form`
   height: 100%;
   width: 100%;
 `
-export const CloseForm = styled.div`
-  align-items: center;
-  display: flex;
-  flex-direction: row;
-  position: relative;
-`
-export const StyledImage = styled(Image)`
-  position: absolute;
-  right: 0;
-  top: 0;
-`
-
 export const TextBoxName = styled.label`
   align-items: center;
   color: #2890CA;

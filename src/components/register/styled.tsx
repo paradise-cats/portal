@@ -1,6 +1,6 @@
 'use client'
 import styled from 'styled-components'
-//Form, TextBoxName, TextBoxTittle, TextBoxValue, TextBoxAmount, TextBoxDate, TextBoxDescription
+import Image from 'next/image'
 
 export const Background = styled.div `
   align-items: center;
@@ -24,5 +24,13 @@ export const BackgroundContent = styled.div `
   height: 600px;
   opacity: 1;
   padding: 16px;
+  position: relative;
   width: 300px;
 `
+
+export const StyledImage = styled(Image)`
+  position: absolute;
+  right: 10px;
+  top: 10px;
+`
+
