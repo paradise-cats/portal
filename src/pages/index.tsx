@@ -6,29 +6,32 @@ import { Card } from '../components/card'
 import { Pagination } from '../components/pagination'
 import { Register } from '../components/register'
 import { RegisterForm } from '../components/register/form'
+import { RegisterLogin } from '../components/register/login'
 
 
 export default function Home() {
-  const [isModalOpen, setIsModalOpen] = useState(false)
-  const closeModal = () => {
-    setIsModalOpen(false)
-  }
-  const openModal = () => {
-    setIsModalOpen(true)
-  }
+  const [modalRoute, setModalRoute] = useState('')
   return (
     <>
-      <BaseLayout openModal={openModal}>
+      <BaseLayout setModalRoute={setModalRoute}>
         <main className="main">
           <ControlPanel/>
           <Card/>
           <Pagination/>
         </main>
       </BaseLayout>
-      {!!isModalOpen &&
-        <Register closeModal={closeModal}>
-         <RegisterForm />
-        </Register>}
+      {
+        !!modalRoute && (
+          <Register setModalRoute={setModalRoute}>
+            {
+              modalRoute === 'login' && <RegisterLogin />
+            }
+            {
+              modalRoute === 'registerForm' && <RegisterForm />
+            }
+          </Register>
+        )
+      }
     </>
   )
 }

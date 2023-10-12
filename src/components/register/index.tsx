@@ -2,19 +2,18 @@
 import React from 'react'
 import { Background, BackgroundContent, StyledImage } from './styled'
 
-
 export const Register = ({
-  closeModal,
+  setModalRoute,
   children,
 }: {
   children: React.ReactNode
-  closeModal: Function
+  setModalRoute: Function
 }) => {
   return (
     <>
       <Background>
         <BackgroundContent>
-          <StyledImage src="icons/close.svg" alt="" width={24} height={24} onClick={()=> closeModal()}/>
+          <StyledImage src="icons/close.svg" alt="" width={24} height={24} onClick={()=> setModalRoute('')}/>
           {children}
         </BackgroundContent>
       </Background>
