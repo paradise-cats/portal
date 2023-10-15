@@ -19,14 +19,16 @@ export const LogoutButton = styled.button`
   background-color: #ffffff;
   border-radius: 4px;
   border: 1.4px solid #83DEBD;
-  color: #83DEBD;
   display: flex;
-  font-size: 12px;
-  font-weight: 500;
   gap: 4px;
   height: 24px;
-  letter-spacing: 0.05em;
-  line-height: 16px;
   padding: 4px 8px;
   width: 60px;
+`
+export const LogoutButtonSpan = styled.span `
+  color: #83DEBD;
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 0.05em;
+  line-height: 16px;
 `

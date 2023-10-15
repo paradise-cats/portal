@@ -1,16 +1,19 @@
 import { Header } from '../header'
 import { Footer } from '../footer'
+import { Register } from '../register'
 
 export const BaseLayout = ({
   children,
+  setModalRoute,
 }: {
-  children: React.ReactNode
+  children: React.ReactNode,
+  setModalRoute: Function,
 }) => {
   return (
     <>
-      <Header/>
+      <Header setModalRoute={setModalRoute}/>
       {children}
-      <Footer/>
+      <Footer setModalRoute={setModalRoute}  />
     </>
   )
 }

@@ -2,19 +2,19 @@
 import styled from 'styled-components'
 
 export const PaginationContainer = styled.section `
+  align-items: center;
   display: flex;
   flex-direction: row;
-  align-items: center;
-  justify-content: center;
-  width: 101px;
-  height: 24px;
   gap: 24px;
+  height: 24px;
+  justify-content: center;
   margin: 16px 0px;
+  width: 101px;
 `
 export const PaginationNumber = styled.a `
+  color: #7FCAF4;
   font-size: 12px;
   font-weight: 700;
-  line-height: 16px;
   letter-spacing: 0.05em;
-  color: #7FCAF4;
+  line-height: 16px;
 `

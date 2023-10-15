@@ -3,10 +3,13 @@ import React from 'react'
 import { FooterContainer, FooterButton } from './styled'
 import Image from 'next/image'
 
-export const Footer = () => {
+interface iFooterProps {
+  setModalRoute: Function
+}
+export const Footer = ({setModalRoute}: iFooterProps) => {
   return (
     <FooterContainer>
-        <FooterButton>
+        <FooterButton onClick={()=>setModalRoute('registerForm')}>
           <Image src="icons/add.svg" alt="+" width={15} height={15} />
           Adicionar Gastos
       </FooterButton>
