@@ -1,6 +1,5 @@
 import { Header } from '../header'
 import { Footer } from '../footer'
-import { Register } from '../register'
 
 export const BaseLayout = ({
   children,

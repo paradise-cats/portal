@@ -1,8 +1,25 @@
 'use client'
 import React from 'react'
-import { SearchType, Filter, FilterButton, FilterButtonSpan, Period, SearchName, SearchDate, SearchDateSpan, SearchOrder, SearchTime, SearchTimeButton, SearchTimeSpan, SearchAlphabetic, AscendingOrder, SearchAlphabeticSpan, DescendingOrder } from './styled'
+import {
+  AscendingOrder,
+  DescendingOrder,
+  Filter,
+  FilterButton,
+  FilterButtonSpan,
+  Period,
+  SearchAlphabetic,
+  SearchAlphabeticSpan,
+  SearchDate,
+  SearchDateSpan,
+  SearchName,
+  SearchOrder,
+  SearchTime,
+  SearchTimeButton,
+  SearchTimeSpan,
+  SearchType,
+} from './styled'
 import Image from 'next/image'
-// , Period, SearchType, SearchName, SearchDate,  SearchTime, SearchAlphabetic, Filter, FilterButton, FilterButtonSpan, SearchDateSpan, Recent, Old, AscendingOrder, DescendingOrder
+
 interface iFilterDropdownProps {
   onClick: React.MouseEventHandler<HTMLButtonElement>
 }

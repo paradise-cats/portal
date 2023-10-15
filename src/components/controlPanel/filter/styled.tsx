@@ -1,6 +1,6 @@
 'use client'
 import styled from 'styled-components'
-// SearchOrder, Periodo, SearchType OrdemDePesquisa, De, Ate, MaisAntigo, MaisRecente, OrdemAlfabeticaCrescente, OrdemAlfabeticaDecrescente
+
 export const SearchType = styled.section `
   align-items: flex-start;
   background-color: #ffffff;

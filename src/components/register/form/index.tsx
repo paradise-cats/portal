@@ -1,6 +1,16 @@
 'use client'
 import React from 'react'
-import { Form, TextBoxName, TextBox, DescriptionBox, PhotoDiv, FormButtonSpan, ImageButton, ImageButtonSpan, FormButton } from './styled'
+import {
+  DescriptionBox,
+  Form,
+  FormButton,
+  FormButtonSpan,
+  ImageButton,
+  ImageButtonSpan,
+  PhotoDiv,
+  TextBox,
+  TextBoxName,
+} from './styled'
 import Image from 'next/image'
 
 export const RegisterForm = () => {

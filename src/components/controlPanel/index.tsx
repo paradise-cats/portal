@@ -1,6 +1,12 @@
 'use client'
 import React, { useState } from 'react'
-import { SectionControlPanel, Span, ContainerSearchBar, FilterButton, FilterDiv } from './styled'
+import {
+  ContainerSearchBar,
+  FilterButton,
+  FilterDiv,
+  SectionControlPanel,
+  Span,
+} from './styled'
 import Image from 'next/image'
 import { FilterDropDown } from './filter'
 
