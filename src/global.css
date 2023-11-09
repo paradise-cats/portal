@@ -22,7 +22,8 @@ a {
   align-items: center;
   background: #FBFBFB;
   box-shadow: 0px 2px 10px -3px #00000040;
-  height: 600px;
+  min-height: 600px;
+  height: 100%;
 }
 
 

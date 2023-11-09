@@ -1,23 +1,31 @@
-'use client'
-import React from 'react'
-import { Container, TextBoxName, TextBox, SubmitButton, SubmitButtonSpan } from './styled'
+'use client';
+import React from 'react';
+import { Container, TextBoxName, TextBox, SubmitButton, SubmitButtonSpan } from './styled';
 
-export const RegisterLogin = () => {
+export const RegisterLogin = ({
+  recording,
+  setPassword,
+  setUsername,
+}: {
+  setUsername: (username: string) => void;
+  setPassword: (password: string) => void;
+  recording: () => void;
+}) => {
   return (
-    <Container>
+    <Container onSubmit={recording}>
       <TextBoxName>
         Usuário
-        <TextBox type='text' placeholder='username'/>
+        <TextBox type='text' placeholder='username' onChange={(e) => setUsername(e.target.value)} />
       </TextBoxName>
       <TextBoxName>
         Senha
-        <TextBox type='text' placeholder='password'/>
+        <TextBox type='password' placeholder='password' onChange={(e) => setPassword(e.target.value)} />
       </TextBoxName>
-      <SubmitButton>
+      <SubmitButton type='submit'>
         <SubmitButtonSpan>
-           Login
+          Login
         </SubmitButtonSpan>
       </SubmitButton>
     </Container>
-  )
-}
+  );
+};
