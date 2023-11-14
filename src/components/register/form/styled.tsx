@@ -21,10 +21,15 @@ export const TextBoxName = styled.label`
   padding-left: 8px;
   text-align: left;
 `
-export const TextBox = styled.input`
+
+interface ITextBoxProps {
+  hasError?: boolean
+}
+
+export const TextBox = styled.input<ITextBoxProps>`
   border-radius: 4px;
-  border: 0.5px solid #E6E6E6;
-  box-shadow: 0px 2px 10px -3px #00000040;
+  border: 0.5px solid ${props => props.hasError ? '#dd3300' : '#E6E6E6'};
+  box-shadow: 0px 2px 10px -3px ${props => props.hasError ? '#dd3300' : '#00000040'};
   padding: 8px;
   width: 100%;
 `

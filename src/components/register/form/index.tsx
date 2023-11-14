@@ -1,5 +1,5 @@
 'use client'
-import React, {useState} from 'react'
+import React, {useState, useCallback} from 'react'
 import {
   DescriptionBox,
   Form,
@@ -12,30 +12,35 @@ import {
   TextBoxName,
 } from './styled'
 import Image from 'next/image'
-import { IBillData } from '@/interfaces/bill'
+import { IBillData, IFormError } from '@/interfaces/bill'
 
 export const RegisterForm = ({
+  errorList,
+  setErrorList,
   editingCard,
   Submit,
   Delete
 }: {
+  errorList: IFormError[]
+  setErrorList: Function
   editingCard: IBillData | null
-  Submit: (data: IBillData) => void
+  Submit: (data: IBillData) => void | IFormError[]
   Delete: () => void
 }) => {
-  const [billId, setBillId] = useState(editingCard?.key || '')
   const [title, setTitle] = useState(editingCard?.title || '')
-  const [price, setPrice] = useState(editingCard?.price || '')
-  const [amount, setAmount] = useState(editingCard?.amount || '')
-  const [date, setDate] = useState(editingCard?.date || '')
+  const [price, setPrice] = useState(editingCard?.price || 0)
+  const [amount, setAmount] = useState(editingCard?.amount || 0)
+  const [date, setDate] = useState(editingCard?.date
+    ? new Date(editingCard.date).toLocaleDateString('en-CA') // Use a localização desejada
+    : ''
+    )
   const [description, setDescription] = useState(editingCard?.description || '')
   const [photo, setPhoto] = useState(editingCard?.photo || '')
 
   const clearForm = () => {
-    setBillId('');
     setTitle('');
-    setPrice('');
-    setAmount('');
+    setPrice(0);
+    setAmount(0);
     setDate('');
     setDescription('');
     setPhoto('');
@@ -44,7 +49,6 @@ export const RegisterForm = ({
   const onSubmit = (e: React.MouseEvent) => {
     e.preventDefault()
     const updatedCard = {
-      billId,
       title,
       price,
       amount,
@@ -52,8 +56,8 @@ export const RegisterForm = ({
       description,
       photo
     }
-    Submit(updatedCard)
-    clearForm()
+    const errors = Submit(updatedCard)
+    if(!errors?.length) clearForm()
   }
 
   const onDelete = (e: React.MouseEvent) => {
@@ -62,28 +66,60 @@ export const RegisterForm = ({
     clearForm()
   }
 
+  const getErrors = useCallback((key: string): IFormError[] => {
+    return errorList.filter(error => error.key === key)
+  }, [errorList])
+
+
   return (
     <Form>
       <TextBoxName>
-          Título
-        </TextBoxName>
-      <TextBox placeholder='Título do Gasto' type='text' value={title} onChange={(e) => setTitle(e.target.value)} />
+        Título
+      </TextBoxName>
+      <TextBox
+        placeholder='Título do Gasto'
+        type='text'
+        value={title}
+        onChange={(e) => setTitle(e.target.value)}
+        hasError={getErrors("title").length > 0}
+      />
       <TextBoxName>
         Valor total
       </TextBoxName>
-      <TextBox placeholder='R$0,00' type='text' value={price} onChange={(e) => setPrice(e.target.value)} />
+      <TextBox
+      placeholder='R$0,00'
+      type='number'
+      value={price}
+      onChange={(e) =>setPrice(parseFloat(e.target.value))}
+      hasError={getErrors("price").length > 0}
+      />
       <TextBoxName>
         Quantidade
       </TextBoxName>
-      <TextBox placeholder='0' type='text' value={amount} onChange={(e) => setAmount(e.target.value)} />
+      <TextBox placeholder='0'
+      type='number'
+      value={amount}
+      onChange={(e) =>setAmount(parseFloat(e.target.value))}
+      hasError={getErrors("amount").length > 0}
+      />
       <TextBoxName>
         Data
       </TextBoxName>
-      <TextBox placeholder='DD/MM/AA' type='text' value={date} onChange={(e) => setDate(e.target.value)} />
+      <TextBox
+      placeholder='DD/MM/AA'
+      type='date'
+      value={date}
+      onChange={(e) => setDate(e.target.value)}
+      hasError={getErrors("date").length > 0}
+      />
       <TextBoxName>
         Descrição
       </TextBoxName>
-      <DescriptionBox placeholder='Descrição do Gasto' value={description} onChange={(e) => setDescription(e.target.value)} />
+      <DescriptionBox
+      placeholder='Descrição do Gasto'
+      value={description}
+      onChange={(e) => setDescription(e.target.value)}
+      />
       <PhotoDiv>
       <TextBoxName>
         Foto

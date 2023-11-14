@@ -10,6 +10,11 @@ export const SectionControlPanel = styled.section`
   justify-content: center;
   padding: 10px 40px;
   width: 360px;
+  @media (min-width: 1200px) {
+    width: 100%;
+    padding: 30px 40px;
+    height: 200px;
+  };
 `
 export const Span = styled.span`
   align-self: flex-start;
@@ -18,6 +23,9 @@ export const Span = styled.span`
   font-weight: 500;
   letter-spacing: 0.05em;
   line-height: 16px;
+  @media (min-width: 1200px) {
+
+  };
 `
 
 export const ContainerSearchBar = styled.div`
@@ -35,6 +43,17 @@ export const ContainerSearchBar = styled.div`
   line-height: 14px;
   padding: 8px 9px;
   width: 280px;
+  @media (min-width: 1200px) {
+    width: 100%;
+  };
+`
+export const SearchBar = styled.input `
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  @media (min-width: 1200px) {
+
+  };
 `
 export const FilterButton = styled.button `
   align-items: center;

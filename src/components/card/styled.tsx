@@ -1,6 +1,17 @@
 'use client'
 import styled from 'styled-components'
 
+export const CardBox = styled.section`
+  @media (min-width: 1200px) {
+  width: 100%;
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 40px;
+  white-space: nowrap;
+  }
+`
 export const CardContainer = styled.article`
   align-items: center;
   border-radius: 19px;
@@ -12,6 +23,13 @@ export const CardContainer = styled.article`
   justify-content: center;
   padding: 16px 8px;
   width: 280px;
+  box-sizing: border-box;
+  @media (min-width: 1200px) {
+    width: 100%;
+    padding: 0px 0px 0px 20px;
+    height: 50px;
+    justify-content: flex-start;
+  }
 `
 export const LeftText = styled.div`
   display: flex;
@@ -19,7 +37,23 @@ export const LeftText = styled.div`
   gap: 8px;
   height: 73px;
   width: 134px;
-
+  @media (min-width: 1200px) {
+    flex-direction: row;
+    height: 30px;
+    width: 50%;
+    align-items: center;
+    gap: 16px;
+  }
+`
+export const CardInfo = styled.div `
+    @media (min-width: 1200px) {
+    display: flex;
+    flex-direction: row;
+    height: 30px;
+    width: 50%;
+    align-items: center;
+    gap: 16px;
+  }
 `
 export const CardName = styled.p`
   color: #2890CA;
@@ -41,6 +75,9 @@ export const CardText = styled.span`
   font-weight: 400;
   letter-spacing: 0.05em;
   line-height: 16px;
+  @media (min-width: 1200px) {
+    width: 25%;
+  }
 `
 export const RightText = styled.div`
   align-items: center;
@@ -49,6 +86,13 @@ export const RightText = styled.div`
   gap: 32px;
   height: 72px;
   width: 83px;
+  @media (min-width: 1200px) {
+    flex-direction: row;
+    height: 30px;
+    width: 50%;
+    padding: 0px 20px 0px 0px;
+    justify-content: flex-end;
+  }
 `
 export const CardPrice = styled.span`
   color: #6C6C6C;
@@ -56,6 +100,9 @@ export const CardPrice = styled.span`
   font-weight: 500;
   letter-spacing: 0.05em;
   line-height: 16px;
+  @media (min-width: 1200px) {
+    width: 15%;
+  }
 `
 export const CardButton = styled.button`
   align-items: center;
