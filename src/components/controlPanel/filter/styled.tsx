@@ -2,7 +2,6 @@
 import styled from 'styled-components'
 
 export const SearchType = styled.section `
-  align-items: flex-start;
   background-color: #ffffff;
   border-radius: 8px;
   color: #A3A3A3;
@@ -11,10 +10,14 @@ export const SearchType = styled.section `
   gap: 10px;
   height: 40vh;
   padding: 16px;
-  position: absolute;
-  top: 0;
   width: 100%;
   z-index: 1;
+  position: absolute;
+  top: 0;
+  align-items: flex-start;
+  @media (min-width: 1200px) {
+    height: 200px;
+  };
 `
 export const Filter = styled.article `
   align-items: center;
@@ -22,16 +25,20 @@ export const Filter = styled.article `
   height: 24px;
   justify-content: flex-start;
   width: 100%;
+  box-sizing: border-box;
+  @media (min-width: 1200px) {
+
+  };
 `
 export const FilterButton = styled.button `
   align-items: center;
   background-color: #ffffff;
   display: flex;
   gap: 10px;
-  height: 16px;
-  padding: 8px 0px;
-  width: 90%;
-
+  height: 100%;
+  width: 100%;
+  @media (min-width: 1200px) {
+};
 `
 export const FilterButtonSpan = styled.span `
   color: #A3A3A3;
@@ -44,8 +51,11 @@ export const Period = styled.div `
   display: flex;
   flex-direction: column;
   gap: 16px;
-  height: 56px;
-  width: 243px;
+  height: 60px;
+  width: 300px;
+  @media (min-width: 1200px) {
+
+  }
 `
 export const SearchName = styled.span `
   color: #6C6C6C;
@@ -77,6 +87,10 @@ export const SearchOrder = styled.article `
   height: 160px;
   justify-content: flex-end;
   width: 226px;
+  @media (min-width: 1200px) {
+    height: 100px;
+    width: 300px;
+  }
 `
 export const SearchTime = styled.div `
   display: flex;
@@ -112,6 +126,9 @@ export const SearchAlphabetic = styled.div `
   height: 200px;
   justify-content: flex-end;
   width: 100%;
+  @media (min-width: 1200px) {
+    flex-direction: row;
+  }
 `
 export const AscendingOrder = styled.button `
   background: #ffffff;
@@ -120,6 +137,10 @@ export const AscendingOrder = styled.button `
   height: 32px;
   padding: 8px;
   width: 60%;
+  @media (min-width: 1200px) {
+    height: 30px;
+    width: 70%;
+  }
 `
 export const SearchAlphabeticSpan = styled.span `
   color: #2890CA;
@@ -131,5 +152,18 @@ export const DescendingOrder = styled.button `
   height: 32px;
   padding: 8px;
   width: 60%;
+  @media (min-width: 1200px) {
+    height: 30px;
+    width: 70%;
+  }
 `
+export const SearchDateDiv = styled.div `
 
+`
+export const SearchDateInput = styled.input `
+
+`
+export const ListType = styled.div `
+  display: flex;
+  flex-direction: row;
+`

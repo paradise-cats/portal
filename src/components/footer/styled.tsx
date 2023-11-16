@@ -10,7 +10,8 @@ export const FooterContainer = styled.footer`
   flex-direction: row;
   height:80px;
   justify-content: center;
-  position: absolute;
+  position: fixed;
+  bottom: 0;
   width:100%;
 `
 export const FooterButton = styled.button`

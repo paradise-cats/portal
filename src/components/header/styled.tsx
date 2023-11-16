@@ -1,6 +1,15 @@
 'use client'
 import styled from 'styled-components'
+import Image from 'next/image';
 
+export const StyledLogo = styled(Image)`
+  /* Adicione estilos conforme necessário */
+  @media (min-width: 1200px) {
+    position: absolute;
+    left: 0;
+    margin-left: 30px;
+  };
+`;
 export const HeaderContainer = styled.header`
   align-items: center;
   background-color: #FBFBFB;
@@ -9,9 +18,13 @@ export const HeaderContainer = styled.header`
   display: flex;
   flex-direction: row;
   gap: 66px;
-  height: 72px;
+  height: 80px;
   justify-content: center;
   width: 100%;
+  @media (min-width: 1200px) {
+    padding: 30px;
+    position: relative;
+  };
 `
 
 export const LogoutButton = styled.button`
@@ -24,6 +37,11 @@ export const LogoutButton = styled.button`
   height: 24px;
   padding: 4px 8px;
   width: 60px;
+  @media (min-width: 1200px) {
+    position: absolute;
+    right: 0;
+    margin-right: 30px;
+  };
 `
 export const LogoutButtonSpan = styled.span `
   color: #83DEBD;
